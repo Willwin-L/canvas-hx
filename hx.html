@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弧线</title>
+	<style>
+        #canvas{
+            border:2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="600"></canvas>
+
+	 <script>
+        var can = document.getElementById('canvas');
+        
+        var con = can.getContext('2d');
+
+        con.strokeStyle = 'red';
+
+        con.beginPath();
+        //创建开始点
+        con.moveTo(50,100);
+        //创建水平线
+        con.lineTo(100,100);
+        //创建弧 (弧的起点的 x 坐标,y,终点x,y,r半径)
+        con.arcTo(300,100,300,300,200)
+        //创建垂直线
+        con.lineTo(300,400)
+
+        con.stroke()
+     </script>
+</body>
+</html>
